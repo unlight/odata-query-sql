@@ -1,0 +1,33 @@
+{
+  "name": "odata-query-sql",
+  "version": "0.0.0",
+  "description": "Converts odata query to sql query",
+  "keywords": [],
+  "author": "S",
+  "license": "Xnet",
+  "main": "./lib",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@iamthes/query-builder": "0.0.3",
+    "odata-parser": "^1.4.1"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "oquery": "0.0.8",
+    "sigh": "^0.12.32",
+    "sigh-ava": "^0.3.1",
+    "sigh-ts": "0.0.5",
+    "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
