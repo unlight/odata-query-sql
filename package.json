@@ -10,7 +10,8 @@
     "test": "test"
   },
   "dependencies": {
-    "@iamthes/query-builder": "0.0.3",
+    "@iamthes/query-builder": "0.0.5",
+    "lodash": "4.14.1",
     "odata-parser": "^1.4.1"
   },
   "devDependencies": {
