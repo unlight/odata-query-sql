@@ -10,16 +10,16 @@
     "test": "test"
   },
   "dependencies": {
-    "@iamthes/query-builder": "0.0.5",
-    "lodash": "4.14.1",
+    "@iamthes/query-builder": "0.0.6",
+    "lodash": "4.15.0",
     "odata-parser": "^1.4.1"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "0.16.0",
     "oquery": "0.0.8",
     "sigh": "^0.12.32",
     "sigh-ava": "^0.3.1",
-    "sigh-ts": "0.0.5",
+    "sigh-ts": "0.0.10",
     "typescript": "^1.8.10"
   },
   "scripts": {

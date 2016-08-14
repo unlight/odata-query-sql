@@ -33,15 +33,19 @@ function query(query, options = {}) {
     return result;
 }
 
-function selectExpand(sql, name, {table, wheres}) {
-    var idField = name + "_id"; // TODO: Fix hardcoded value
-    sql.select(idField);
-    sql.table(table);
+function applyWheres(sql, wheres: Array<any>) {
     wheres.forEach(expr => {
         var method = expr.method;
         var args = expr.args || [];
         sql[method](...args);
     });
+}
+
+function selectExpand(sql, name, {table, wheres}) {
+    var idField = name + "_id"; // TODO: Fix hardcoded value
+    sql.select(idField);
+    sql.table(table);
+    applyWheres(sql, wheres);
     var subquery = sql.get();
     var result = sql.select()
         .table(name)
@@ -53,22 +57,14 @@ function selectExpand(sql, name, {table, wheres}) {
 function selectCount(sql, {table, wheres}) {
     sql.table(table);
     sql.select("count", "*", "");
-    wheres.forEach(expr => {
-        var method = expr.method;
-        var args = expr.args || [];
-        sql[method](...args);
-    });
+    applyWheres(sql, wheres);
     return sql.get();
 }
 
 function selectData(sql, {table, selects, wheres, orderbys, offset, limit}) {
     sql.table(table);
     selects.forEach(s => sql.select(s));
-    wheres.forEach(expr => {
-        var method = expr.method;
-        var args = expr.args || [];
-        sql[method](...args);
-    });
+    applyWheres(sql, wheres);
     orderbys.forEach(o => {
         var [field] = Object.keys(o);
         var direction = o[field];

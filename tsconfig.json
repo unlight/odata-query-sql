@@ -7,7 +7,7 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"removeComments": false,
-		"declaration": false,
+		"declaration": true,
 		"inlineSources": true,
 		"noEmitHelpers": false,
 		"sourceMap": true
