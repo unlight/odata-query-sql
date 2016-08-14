@@ -1,6 +1,6 @@
 {
   "name": "odata-query-sql",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Converts odata query to sql query",
   "keywords": [],
   "author": "S",
