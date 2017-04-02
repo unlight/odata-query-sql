@@ -1,5 +1,7 @@
 odata-query-sql
 ===============
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/unlight/odata-query-sql.svg)](https://greenkeeper.io/)
 Converts odata query to sql query.
 
 INSTALL
